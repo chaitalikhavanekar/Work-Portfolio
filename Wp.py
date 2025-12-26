@@ -1,98 +1,134 @@
 import streamlit as st
 
-# ------------------ PAGE CONFIG ------------------
+# -------------------------------------------------
+# PAGE CONFIG
+# -------------------------------------------------
 st.set_page_config(
-    page_title="Finance Research Portfolio",
+    page_title="Finance & Research Portfolio",
     layout="wide"
 )
 
-# ------------------ CUSTOM CSS ------------------
+# -------------------------------------------------
+# CUSTOM CSS (STRICT, PROFESSIONAL)
+# -------------------------------------------------
 st.markdown("""
 <style>
-body {
+html, body, [class*="css"]  {
     background-color: #121524;
-    color: #C0C9DB;
-}
-
-.main {
-    background-color: #121524;
+    color: #9DACCC;
+    font-family: "Inter", sans-serif;
 }
 
 h1, h2, h3 {
     color: #C0C9DB;
+    font-weight: 600;
+}
+
+.section {
+    margin-top: 40px;
 }
 
 .card {
     background-color: #384C65;
-    padding: 25px;
-    border-radius: 15px;
-    margin-bottom: 20px;
+    padding: 28px;
+    border-radius: 14px;
+    margin-bottom: 28px;
 }
 
-.button a {
-    text-decoration: none;
-    color: #121524;
+.label {
+    font-size: 14px;
+    color: #9DACCC;
+    margin-bottom: 6px;
+}
+
+input {
+    background-color: #121524 !important;
+    color: #C0C9DB !important;
+}
+
+.stButton button {
     background-color: #485F88;
-    padding: 10px 18px;
-    border-radius: 10px;
+    color: #121524;
+    border-radius: 8px;
+    padding: 8px 18px;
     font-weight: 600;
+    border: none;
 }
 
-.button a:hover {
-    background-color: #9DACCC;
+.stButton button:hover {
+    background-color: #C0C9DB;
+    color: #121524;
 }
 </style>
 """, unsafe_allow_html=True)
 
-# ------------------ HERO SECTION ------------------
-st.markdown("""
-<h1>📊 Finance & Research Portfolio</h1>
-<p>Analytical projects, market research, and data-driven insights.</p>
-""", unsafe_allow_html=True)
+# -------------------------------------------------
+# HEADER
+# -------------------------------------------------
+st.markdown("<h1>Finance & Research Portfolio</h1>", unsafe_allow_html=True)
+st.markdown(
+    "<p>Selected analytical applications and macro-financial research prototypes.</p>",
+    unsafe_allow_html=True
+)
 
-st.divider()
+# -------------------------------------------------
+# PROJECT SECTION
+# -------------------------------------------------
+st.markdown("<div class='section'><h2>Project Portfolio</h2></div>", unsafe_allow_html=True)
 
-# ------------------ PROJECTS ------------------
-st.markdown("## 🚀 Featured Projects")
+# ------------------- PROJECT 1 -------------------
+st.markdown("<div class='card'>", unsafe_allow_html=True)
+st.markdown("<h3>ARIMA Forecasting Application</h3>", unsafe_allow_html=True)
+st.markdown(
+    "<p>Time-series forecasting model for economic and financial indicators using ARIMA methodology.</p>",
+    unsafe_allow_html=True
+)
 
-# ---- PROJECT 1 ----
-st.markdown("""
-<div class="card">
-    <h3>Indian Startup Failure Analysis</h3>
-    <p>
-    Deep dive into why Indian startups fail using secondary data,
-    unit economics, governance gaps, and market structure analysis.
-    </p>
-    <div class="button">
-        <a href="https://your-streamlit-app-link" target="_blank">Live App</a>
-        &nbsp;&nbsp;
-        <a href="https://your-gamma-ppt-link" target="_blank">Research PPT</a>
-        &nbsp;&nbsp;
-        <a href="https://your-google-drive-pdf" target="_blank">Full Report</a>
-    </div>
-</div>
-""", unsafe_allow_html=True)
+arima_link = st.text_input(
+    "Streamlit Application Link",
+    placeholder="https://your-arima-app.streamlit.app",
+    key="arima"
+)
 
-# ---- PROJECT 2 ----
-st.markdown("""
-<div class="card">
-    <h3>Working Capital Management – Indian Corporates</h3>
-    <p>
-    Research on post-COVID liquidity cycles, cash conversion,
-    and financing patterns across Indian companies.
-    </p>
-    <div class="button">
-        <a href="https://your-streamlit-app-link" target="_blank">Live Dashboard</a>
-        &nbsp;&nbsp;
-        <a href="https://your-gamma-ppt-link" target="_blank">Presentation</a>
-    </div>
-</div>
-""", unsafe_allow_html=True)
+if arima_link:
+    st.markdown(f"[Open Application]({arima_link})")
 
-# ------------------ FOOTER ------------------
-st.divider()
-st.markdown("""
-<p style="text-align:center; color:#9DACCC;">
-Built with Streamlit | Finance • Research • Strategy
-</p>
-""", unsafe_allow_html=True)
+st.markdown("</div>", unsafe_allow_html=True)
+
+# ------------------- PROJECT 2 -------------------
+st.markdown("<div class='card'>", unsafe_allow_html=True)
+st.markdown("<h3>Macro News Indicator Application</h3>", unsafe_allow_html=True)
+st.markdown(
+    "<p>Macro sentiment and news-based indicator to assess economic and market-level signals.</p>",
+    unsafe_allow_html=True
+)
+
+macro_link = st.text_input(
+    "Streamlit Application Link",
+    placeholder="https://your-macro-news-app.streamlit.app",
+    key="macro"
+)
+
+if macro_link:
+    st.markdown(f"[Open Application]({macro_link})")
+
+st.markdown("</div>", unsafe_allow_html=True)
+
+# ------------------- PROJECT 3 -------------------
+st.markdown("<div class='card'>", unsafe_allow_html=True)
+st.markdown("<h3>Asset Allocation Application</h3>", unsafe_allow_html=True)
+st.markdown(
+    "<p>Portfolio allocation model demonstrating risk-return optimisation across asset classes.</p>",
+    unsafe_allow_html=True
+)
+
+asset_link = st.text_input(
+    "Streamlit Application Link",
+    placeholder="https://your-asset-allocation-app.streamlit.app",
+    key="asset"
+)
+
+if asset_link:
+    st.markdown(f"[Open Application]({asset_link})")
+
+st.markdown("</div>", unsafe_allow_html=True)
