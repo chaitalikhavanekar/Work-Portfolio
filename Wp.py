@@ -2,6 +2,11 @@ import streamlit as st
 
 # ------------------ CONFIG ------------------
 st.set_page_config(
+    # ------------------ PROJECT URL CONFIG ------------------
+
+ARIMA_URL = "https://iobf9zbvv2xorljeuqupfv.streamlit.app"
+MACRO_URL = "https://your-macro-news-app.streamlit.app"
+ASSET_URL = "https://1versionpy-kuubkwhmt8kzpxpu2vb3fh.streamlit.app"
     page_title="Finance & Research Portfolio",
     layout="wide"
 )
